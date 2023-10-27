@@ -1,0 +1,15 @@
+/* reset */
+body,
+p {
+  margin: unset;
+}
+
+h1 {
+  margin: unset;
+  font-weight: unset;
+  font-size: unset;
+}
+
+/* typhography */
+
+/* layout */
