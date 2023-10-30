@@ -10,6 +10,12 @@ h1 {
   font-size: unset;
 }
 
+input {
+  background-color: unset;
+  padding: unset;
+  border: none;
+}
+
 /* typhography */
 :root {
   font-family: Arial, Helvetica, sans-serif;
@@ -17,5 +23,32 @@ h1 {
 
 /* layout */
 .wrapper {
+  width: 361px;
+  margin: 362px auto;
+  padding: 36px 40px;
+  background-color: white;
+}
+
+/* common */
+input {
+  width: 279px;
+  background-color: #f2f2f2;
+}
+
+/* component*/
+body {
   background-color: #6962cb;
+}
+
+.login-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.login-id,
+.login-password {
+  background-color: #f2f2f2;
+  padding: 19px 16px;
+  margin-top: 20px;
 }
