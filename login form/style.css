@@ -23,21 +23,38 @@ input {
 
 /* layout */
 .wrapper {
-  width: 361px;
+  width: 360px;
   margin: 362px auto;
-  padding: 36px 40px;
-  background-color: white;
 }
 
 /* common */
-input {
-  width: 279px;
+.login-id,
+.login-password,
+.login-submit {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.login-id,
+.login-password {
   background-color: #f2f2f2;
+}
+
+.login-submit {
+  background-color: #6962cb;
 }
 
 /* component*/
 body {
   background-color: #6962cb;
+}
+
+.section {
+  background-color: white;
+  padding: 47px 41px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
 }
 
 .login-title {
@@ -46,9 +63,6 @@ body {
   line-height: 27px;
 }
 
-.login-id,
-.login-password {
-  background-color: #f2f2f2;
-  padding: 19px 16px;
-  margin-top: 20px;
+.login-submit {
+  text-align: center;
 }
