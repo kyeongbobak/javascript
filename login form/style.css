@@ -11,5 +11,11 @@ h1 {
 }
 
 /* typhography */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* layout */
+.wrapper {
+  background-color: #6962cb;
+}
