@@ -14,6 +14,22 @@ input {
   background-color: unset;
   padding: unset;
   border: none;
+  outline: unset;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+button {
+  background-color: unset;
+  padding: unset;
+  border: none;
+}
+
+img {
+  vertical-align: bottom;
 }
 
 /* typhography */
@@ -24,25 +40,42 @@ input {
 /* layout */
 .wrapper {
   width: 360px;
-  margin: 362px auto;
+  margin: 160px auto;
 }
 
 /* common */
-.login-id,
-.login-password,
-.login-submit {
+.login-form-id,
+.login-form-password,
+.login-form-button {
   width: 100%;
-  margin-top: 20px;
+  font-size: 15px;
+  margin-top: 25px;
+  padding: 19px 16px;
   border-radius: 4px;
 }
 
-.login-id,
-.login-password {
+.login-form-id,
+.login-form-password {
+  /* input type = text 일 때 안쪽 여백이나 테두리가 요소에 포함되지 않는 상태이기 때문에 다음과 같은 속성을 추가해준다.*/
+  box-sizing: border-box;
   background-color: #f2f2f2;
 }
 
-.login-submit {
+.login-form-button {
   background-color: #6962cb;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-form-id:hover,
+.login-form-password:hover {
+  box-shadow: 0 0 5px #6962cb;
+}
+
+.login-form-button:hover {
+  background-color: black;
+  transition: all 1s ease-in-out;
 }
 
 /* component*/
@@ -52,17 +85,32 @@ body {
 
 .section {
   background-color: white;
-  padding: 47px 41px;
-  border-radius: 5px;
   box-shadow: 0 0 5px black;
+  padding: 47px 41px 25px 41px;
+  border-radius: 5px;
+}
+
+.login-form {
+  position: relative;
 }
 
 .login-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  line-height: 27px;
+  line-height: 35px;
 }
 
-.login-submit {
+.login-form-link {
+  color: #6962cb;
+  font-size: 15px;
   text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.login-form-point {
+  position: absolute;
+  height: 20px;
+  top: 124px;
+  right: 20px;
 }

@@ -12,15 +12,19 @@
 <body>
   <div class="wrapper">
     <div class="section">
-      <h1 class="login-title">SIGN IN TO YOUR
+      <h1 class="login-title">
+        SIGN IN TO YOUR
         <br>ACCOUNT
       </h1>
       <form class="login-form">
-        <input class="login-id" required type="text" placeholder="Username">
-        <input class="login-password" maxlength="8" type="text" placeholder="Password">
-        <input class="login-submit" type="submit" value="SIGN IN">
+        <input class="login-form-id" required type="text" placeholder="Username">
+        <input class="login-form-password" maxlength="8" type="text" placeholder="Password">
+        <img class="login-form-point"
+          src="https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png" onclick="show()"
+          id="showimg">
+        <button class="login-form-button">SIGN IN</button>
       </form>
-      <div class="password-link">Forgot Your password?</div>
+      <div class="login-form-link"><a href="">Forgot Your password?</a></div>
     </div>
   </div>
 </body>
