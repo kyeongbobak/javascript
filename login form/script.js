@@ -1,10 +1,7 @@
-const loginForm = document.querySelector(".login-form");
-const loginFormId = document.querySelector(".login-form-id");
-const loginFormPassword = document.querySelector(".login-form-password");
-const loginFormButton = document.querySelector(".login-form-button");
+function formvalid() {
+  const validPass = document.querySelector("login-form-password").value;
 
-const handleOnClick() {
-
+  if (validPass.length <= 8 || validPass >= 20) {
+    document.createElement("span");
+  }
 }
-
-loginFormButton.addEventListener("click",handleOnClick)
