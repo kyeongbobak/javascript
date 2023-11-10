@@ -49,7 +49,7 @@ img {
 .login-form-button {
   width: 100%;
   font-size: 15px;
-  margin-top: 25px;
+  margin: 10px 0;
   padding: 19px 16px;
   border-radius: 4px;
 }
@@ -104,13 +104,19 @@ body {
   color: #6962cb;
   font-size: 15px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15px;
   cursor: pointer;
 }
 
 .login-form-point {
   position: absolute;
   height: 20px;
-  top: 124px;
+  top: 105px;
   right: 20px;
+}
+
+.valid-pass {
+  color: red;
+  font-size: 15px;
+  margin: 40px 0;
 }

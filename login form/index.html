@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LogIn</title>
   <link rel="stylesheet" href="style.css">
-  <script src="./script.js"></script>
 </head>
 
 <body>
@@ -19,14 +18,17 @@
       </h1>
       <form class="login-form">
         <input class="login-form-id" required type="text" placeholder="Username">
-        <input class="login-form-password" type="text" placeholder="Password">
+        <input class="login-form-password" placeholder="Password" type="password">
         <img class="login-form-point"
-          src="https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png">
+          src="https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png" onclick="show()">
+        <span class="valid-pass"></span>
         <button class="login-form-button">SIGN IN</button>
       </form>
       <div class="login-form-link"><a href="">Forgot Your password?</a></div>
     </div>
   </div>
+  <script src="./script.js"></script>
+
 </body>
 
 </html>
