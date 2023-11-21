@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;400&display=swap" rel="stylesheet">
+  <title>Interactive rating component</title>
+</head>
+
+<body>
+  <div class="l_wrapper">
+    <div class="contents">
+      <img class="contents-point" src="./images/icon-star.svg" alt="">
+      <h1 class="contents-title"> How did we do?</h1>
+      <p class="contents-description"> Please let us know how we did with your support request. All feedback is
+        appreciated
+        to help us improve our offering!</p>
+      <div class="contents-button-list">
+        <!-- data-* 형태로 사용자가 추가하는 데이터를 javascript에서 쉽게 접근하고 처리할 수 있도록 합니다. * 이부분은 사용자가 원하는 데이터를 특정 이름으로 선택할 수 있습니다.  -->
+        <button data-rating="1">1</button>
+        <button data-rating="2">2</button>
+        <button data-rating="3">3</button>
+        <button data-rating="4">4</button>
+        <button data-rating="5">5</button>
+      </div>
+      <button class="contents-button" onclick="handleSubmit()">SUBMIT</button>
+    </div>
+  </div>
+
+  <script>
+
+    let selectedRating = null
+    function handleSelectButton(event) {
+      const rating = event.target.dataset.rating
+      selectedRating = rating
+    }
+
+    const ratingButtons = document.querySelectorAll(".contents-button-list")
+    ratingButtons.forEach(ratingButton => {
+      ratingButton.addEventListener("click", handleSelectButton)
+    })
+
+    function handleSubmit() {
+      if (selectedRating !== null) {
+        location.href = `thankyoustate.html?rating=${selectedRating}`
+      } else {
+        alert("Please select a rating before submitting.");
+      }
+
+    }
+  </script>
+</body>
+
+</html>
