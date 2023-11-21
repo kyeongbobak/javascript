@@ -1,0 +1,27 @@
+/* reset */
+body,
+p {
+  margin: unset;
+}
+
+h1 {
+  margin: unset;
+  font-weight: unset;
+  font-size: unset;
+}
+
+/* layout */
+body {
+  background-color: black;
+}
+
+.l-wrapper {
+  width: 403px;
+  margin: auto;
+}
+
+/* component */
+.contents {
+  width: 100%;
+  background-color: #212730;
+}
