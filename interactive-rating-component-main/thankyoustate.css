@@ -38,15 +38,26 @@ body {
 
 /* component */
 .contents {
-  background: linear-gradient(to top, hsl(216, 19%, 12%), hsl(213, 19%, 18%));
-  padding: 34px;
+  background-color: #20252e;
+  padding: 45px;
   border-radius: 30px;
+  text-align: center;
 }
 
 .contents-point {
   background-color: #272e36;
   padding: 17px;
   border-radius: 50px;
+}
+
+.contents-typhograph {
+  display: inline-block;
+  background-color: #292e37;
+  margin-top: 26px;
+  color: #eb7d36;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 10px 15px;
 }
 
 .contents-title {
