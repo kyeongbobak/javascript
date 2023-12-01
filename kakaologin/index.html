@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title></title>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js"
+    integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,10 +20,8 @@
       <form class="login-form">
         <input class="login-id" type="text" placeholder="카카오계정 (이메일 또는 전화번호)">
         <input class="login-password" type="password" placeholder="비밀번호">
-        <div class="login-checkbox">
-          <input class="checkbox-keep" type="checkbox" id="check" ß>
-        </div>
-        <button class="login-button primary">로그인</button>
+        <label for="login-hold">로그인 상태 유지</label>
+        <button class="login-button primary" onclick="handleLoginClick()">로그인</button>
         <span class="login-word">또는 </span>
         <button class="login-button">QR코드 로그인</button>
         <div class="login-form-link">
@@ -33,6 +35,36 @@
       </form>
     </div>
   </div>
+
+  <script>
+    Kakao.init('cf561e414dbec0acfec56ee479eb7ae2');
+    Kakao.isInitialized();
+    console.log(Kakao.isInitialized())
+
+    function handleLoginClick(event) {
+
+      Kakao.Auth.login({
+        success: function (authObj) {
+          Kakao.API.request({
+            url: '/v2/user/me',
+            success: function (res) {
+              console.log(res)
+              const id = res.id;
+              scope: "account_email"
+              alert('로그인에 성공했습니다!')
+              location.href = "http://127.0.0.1:8080/home"
+            }
+          })
+          console.log(authObj)
+          let token = authObj.access_token;
+        },
+        fail: function (err) {
+          alert(JSON.stringify(err))
+          console.log(err)
+        }
+      })
+    }
+  </script>
 </body>
 
 </html>
