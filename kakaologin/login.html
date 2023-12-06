@@ -5,11 +5,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
   <title></title>
 </head>
 
 <body>
+  <a id="kakao-login-btn" onclick="kakaologin()">
+    <img src="img/kakao_login_medium_narrow.png" alt="kakao_login_medium_narrow"></a>
+  <p id="token-result"></p>
+  <script>
 
+    Kakao.init("cf561e414dbec0acfec56ee479eb7ae2")
+    console.log(Kakao.isInitialized())
+
+    function kakaologin() {
+
+      Kakao.Auth.login({
+
+        scope: "profile_nickname,",
+
+
+        success: function (authObj) {
+          console.log(authObj)
+          const tokenResult = document.getElementById("token-result")
+          tokenResult.innerText = "login success, token" + authObj.access_token;
+
+          Kakao.API.request({
+            url: '/v2/user/me',
+            success: res => {
+              const kakao_account = res.kakao_account;
+              console.log(kakao_account);
+            }
+          });
+        }
+
+      });
+
+    }
+
+  </script>
 </body>
 
 </html>
