@@ -19,9 +19,7 @@
     console.log(Kakao.isInitialized())
 
     function kakaologin() {
-
       Kakao.Auth.login({
-        scope: "profile_nickname,",
         success: function (authObj) {
           console.log(authObj)
           const tokenResult = document.getElementById("token-result")
