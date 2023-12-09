@@ -7,20 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>todolist</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&family=Overpass:wght@100;400&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="section">
+  <div id="wrapper">
+    <div id="section">
       <div id="clock">
         <span id="day"></span>
-        <span id="month"></span>
-        <span id="date"></span>
+        <div id="daydetail">
+          <span id="month"></span>
+          <span id="date"></span>
+        </div>
       </div>
-      <form id="todo-form">
-        <input id="todo-input" type="text" placeholder="Write to do?">
-      </form>
       <ul id="todo-list"></ul>
+      <form id="todo-form">
+        <input id="todo-input" type="text" placeholder="ADD NEW">
+      </form>
     </div>
   </div>
 
@@ -33,7 +39,7 @@
     const monthSpan = document.getElementById("month");
     const dateSpan = document.getElementById("date");
 
-    // time
+    // clock
     function getClock() {
       const daysOfWeek = [
         'SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'

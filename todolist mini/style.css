@@ -1,0 +1,101 @@
+/* reset */
+body,
+p {
+  margin: unset;
+  padding: unset;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+}
+
+input {
+  border: unset;
+  padding: unset;
+  outline: unset;
+}
+
+input::placeholder {
+  color: #929df8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-indent: 1px;
+}
+
+button {
+  border: unset;
+  padding: unset;
+  background-color: unset;
+  font-size: 12px;
+  font-weight: 800;
+  color: #6e7cf7;
+}
+
+/* common */
+#month,
+#date {
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+#day {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* component */
+body {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+:root {
+  font-family: "Manrope", sans-serif;
+  font-family: "Overpass", sans-serif;
+}
+
+#wrapper {
+  background-color: white;
+  width: 300px;
+  margin: 100px auto;
+}
+
+#section {
+  color: #6e7cf7;
+  box-shadow: 0px 0px 42px -19px rgba(18, 17, 17, 0.75);
+}
+
+#clock {
+  text-align: center;
+  border-bottom: 2px solid #f6f7fe;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#todo-list {
+  padding: 20px;
+}
+
+#todo-list li {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+#todo-form {
+  border-top: 2px solid #f6f7fe;
+  padding: 20px;
+}
+
+#todo-input {
+  display: inline-block;
+  text-align: right;
+  margin-left: 120px;
+}
