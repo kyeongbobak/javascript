@@ -10,10 +10,25 @@
 
 <body>
   <form id="todo-form">
-    <h1 id="todo-title">TodoList</h1>
-    <input type="text" placeholder="Write to do?">
+    <h1 id="todo-title">ToDoList</h1>
+    <input id="todo-input" type="text" placeholder="Write to do?">
   </form>
   <ul class="todo-list"></ul>
+
+  <script>
+    const toDoForm = document.getElementById("todo-form")
+    const todoInput = document.getElementById("todo-input")
+    const todoList = document.getElementById("todo-list")
+
+    function handleOnSubmit(event) {
+      event.preventDefault()
+      const newToDo = todoInput.value
+      console.log(newToDo)
+      todoInput.value = ""
+    }
+
+    toDoForm.addEventListener("submit", handleOnSubmit)
+  </script>
 </body>
 
 </html>
