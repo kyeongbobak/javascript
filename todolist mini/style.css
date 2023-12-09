@@ -16,6 +16,7 @@ input {
   border: unset;
   padding: unset;
   outline: unset;
+  color: #929df8;
 }
 
 input::placeholder {
@@ -24,6 +25,10 @@ input::placeholder {
   font-weight: 800;
   letter-spacing: 1px;
   text-indent: 1px;
+}
+
+input:focus::placeholder {
+  color: #929df8;
 }
 
 button {
