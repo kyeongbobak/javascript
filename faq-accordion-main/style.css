@@ -1,0 +1,27 @@
+/* reset */
+body {
+  margin: unset;
+}
+
+/* typhography */
+
+/* layout */
+.l-wrapper {
+  background-color: white;
+  width: 396px;
+  margin: 0 auto;
+}
+
+/* common */
+
+/* component */
+body {
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+
+  background-color: #f7eefe;
+}
+
+.main {
+  margin-top: 100px;
+}
