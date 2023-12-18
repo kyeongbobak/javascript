@@ -19,29 +19,42 @@
         <div class="item-typhography">
           what is Frontend Mentor, and how will it help me?
         </div>
-        <div class="item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ducimus delectus
-          molestias totam nostrum doloremque tempore veniam! Aliquam minus consequuntur architecto, exercitationem at,
-          voluptatibus aut veniam provident illo rerum soluta?</div>
-      </div>
-      <div class="main-item">
+        <img onclick="show()" src="./assets/images/icon-plus.svg" alt="">
+        <p class="text"></p>
         <div class="item-typhography">
           what is Frontend Mentor, and how will it help me?
         </div>
-        <div class="item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ducimus delectus
-          molestias totam nostrum doloremque tempore veniam! Aliquam minus consequuntur architecto, exercitationem at,
-          voluptatibus aut veniam provident illo rerum soluta?</div>
-      </div>
-      <div class="main-item">
+        <img onclick="show()" src="./assets/images/icon-plus.svg" alt="">
+        <p class="text"></p>
         <div class="item-typhography">
           what is Frontend Mentor, and how will it help me?
         </div>
-        <div class="item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ducimus delectus
-          molestias totam nostrum doloremque tempore veniam! Aliquam minus consequuntur architecto, exercitationem at,
-          voluptatibus aut veniam provident illo rerum soluta?</div>
+        <img onclick="show()" src="./assets/images/icon-plus.svg" alt="">
+        <p class="text"></p>
       </div>
 
-    </div>
+      <script>
 
+
+        const text = document.querySelector(".text")
+        const button = document.querySelector("img")
+
+        // 현재 텍스트가 표시되고 있는지 여부를 추적
+        let isTextVisible = false;
+
+        function show() {
+          if (!isTextVisible) {
+            button.src = "./assets/images/icon-minus.svg"
+            text.innerText = "Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with project in HTML, CSS and JavaScript It's suitable for all levels and ideal for portfolio building."
+            isTextVisible = true;
+          } else {
+            button.src = "./assets/images/icon-plus.svg"
+            text.innerText = ""
+            isTextVisible = false
+          }
+        }
+
+      </script>
 </body>
 
 </html>
