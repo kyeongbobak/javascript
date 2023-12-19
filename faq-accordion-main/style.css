@@ -42,10 +42,8 @@ img {
 body {
   background-image: url(./assets/images/background-pattern-desktop.svg);
   background-repeat: no-repeat;
-  /* background-size: 100% auto; */
-  /* background-position: 0 -95px; */
-  background-size: ;
-  background-position: right top;
+  background-size: auto 500px;
+  background-position: 0 -180px;
   background-color: #f7eefe;
 }
 
