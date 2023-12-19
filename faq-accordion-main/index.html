@@ -10,50 +10,82 @@
 </head>
 
 <body>
-  <div class="header">
-  </div>
   <div class="main">
     <div class="l-wrapper">
-      <h1 class="main-title">FAQs</h1>
-      <div class="main-item">
-        <div class="item-typhography">
-          what is Frontend Mentor, and how will it help me?
+      <div class="main-contents">
+        <div class="main-title">
+          <img class="main-title-point" src="./assets/images/icon-star.svg" alt="">
+          <h1 class="main-title-text"> FAQs</h1>
         </div>
-        <img onclick="show()" src="./assets/images/icon-plus.svg" alt="">
-        <p class="text"></p>
-        <div class="item-typhography">
-          what is Frontend Mentor, and how will it help me?
+
+        <div class="contents-section">
+          <div class="section primary">
+            <div class="section-title">What is Frontend Mentor, and how will it help me?</div>
+            <img class="section-point" src="./assets/images/icon-plus.svg" alt="">
+          </div>
+          <div class="section-description"> Frontend Mentor offers realistic coding challenges to help developers
+            improve their
+            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+            all levels and ideal for portfolio building.</div>
         </div>
-        <img onclick="show()" src="./assets/images/icon-plus.svg" alt="">
-        <p class="text"></p>
-        <div class="item-typhography">
-          what is Frontend Mentor, and how will it help me?
+
+        <div class="contents-section">
+          <div class="section primary">
+            <div class="section-title">
+              Is Frontend Mentor free?</div>
+            <img class="section-point" src="./assets/images/icon-plus.svg" alt="">
+          </div>
+          <div class="section-description"> Yes, Frontend Mentor offers both free and premium coding challenges, with
+            the free
+            option providing access to a range of projects suitable for all skill levels.</div>
         </div>
-        <img onclick="show()" src="./assets/images/icon-plus.svg" alt="">
-        <p class="text"></p>
+        <div class="contents-section">
+          <div class="section primary">
+            <div class="section-title">
+              Can I use Frontend Mentor projects in my portfolio?</div>
+            <img class="section-point" src="./assets/images/icon-plus.svg" alt="">
+          </div>
+          <div class="section-description"> The best place to get help is inside Frontend Mentor's Discord community.
+            There's a help
+            channel where you can ask questions and seek support from other community members.</div>
+        </div>
+        <div class="contents-section">
+          <div class="section primary">
+            <div class="section-title">
+              How can I get help if I'm stuck on a challenge?</div>
+            <img class="section-point" src="./assets/images/icon-plus.svg" alt="">
+          </div>
+          <div class="section-description"> The best place to get help is inside Frontend Mentor's Discord community.
+            There's a help
+            channel where you can ask questions and seek support from other community members.</div>
+        </div>
       </div>
 
+      <!-- javascript -->
       <script>
+        // javascript는 항상 첫번째 요소만 참조한다 
+        // Document.querySelector() 는 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element (en-US)를 반환
+        // 각각의 section-point에 대한 event를 개별적으로 처리해야한다. 
+        // id가 아닌 class를 사용하려면 querySelectorAll을 사용한다
+        const clickButtons = document.querySelectorAll(".section-point");
+        const answers = document.querySelectorAll(".section-description");
 
+        clickButtons.forEach((button, index) => {
+          console.log(button)
+          // 새로고침했을 때 기본적으로 section-description 내용이 안보이는 상태를 만들기 위한 코드 
+          answers[index].style.display = "none"
 
-        const text = document.querySelector(".text")
-        const button = document.querySelector("img")
-
-        // 현재 텍스트가 표시되고 있는지 여부를 추적
-        let isTextVisible = false;
-
-        function show() {
-          if (!isTextVisible) {
-            button.src = "./assets/images/icon-minus.svg"
-            text.innerText = "Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with project in HTML, CSS and JavaScript It's suitable for all levels and ideal for portfolio building."
-            isTextVisible = true;
-          } else {
-            button.src = "./assets/images/icon-plus.svg"
-            text.innerText = ""
-            isTextVisible = false
-          }
-        }
-
+          button.addEventListener("click", () => {
+            if (answers[index].style.display === "none") {
+              console.log(answers[index])
+              answers[index].style.display = "block";
+              button.src = "./assets/images/icon-minus.svg";
+            } else {
+              button.src = "./assets/images/icon-plus.svg";
+              answers[index].style.display = "none";
+            }
+          });
+        });
       </script>
 </body>
 
