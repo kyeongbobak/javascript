@@ -124,10 +124,10 @@ body {
   content: "";
   position: absolute;
   right: 130px;
-  top: 55px;
+  top: 60px;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 30px solid #4d576c;
+  border-top: 25px solid #4d576c;
 }
 
 .snsLink-title {
