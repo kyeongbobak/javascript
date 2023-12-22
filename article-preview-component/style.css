@@ -115,6 +115,19 @@ body {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 43%;
+  left: 63%;
+}
+
+.snsLink::after {
+  content: "";
+  position: absolute;
+  right: 130px;
+  top: 55px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid #4d576c;
 }
 
 .snsLink-title {
