@@ -1,5 +1,6 @@
 /* reset */
-body {
+body,
+p {
   margin: unset;
 }
 
@@ -11,6 +12,11 @@ button {
   margin: unset;
   border: unset;
   background-color: unset;
+}
+
+a {
+  text-decoration: none;
+  color: none;
 }
 
 /* typhography */
@@ -56,6 +62,7 @@ body {
 .section-inside {
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
 }
 
 .section-profile {
@@ -84,4 +91,44 @@ body {
   height: 40px;
   border-radius: 50px;
   background-color: #eff2f9;
+  cursor: pointer;
+}
+
+.section-button:hover {
+  background-color: #717d95;
+}
+
+.button-image .icon-path {
+  fill: #6e8098;
+}
+
+.button-image:hover .icon-path {
+  fill: white;
+}
+
+.snsLink {
+  display: flex;
+  width: 240px;
+  border-radius: 10px;
+  background-color: #4d576c;
+  padding: 22px 28px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.snsLink-title {
+  font-size: 18px;
+  color: #8d99ac;
+  letter-spacing: 5px;
+  text-rendering: 5px;
+}
+
+.snsLink-list {
+  display: flex;
+  gap: 20px;
+}
+
+.list-item img {
+  width: 25px;
 }
