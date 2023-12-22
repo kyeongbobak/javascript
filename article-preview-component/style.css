@@ -1,0 +1,87 @@
+/* reset */
+body {
+  margin: unset;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  margin: unset;
+  border: unset;
+  background-color: unset;
+}
+
+/* typhography */
+
+/* layout */
+.l-wrapper {
+  width: 900px;
+  margin: 250px auto;
+}
+
+/* component */
+body {
+  background-color: #e6eaee;
+}
+
+.article {
+  display: flex;
+}
+
+.cover-image {
+  width: 400px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.article-contents {
+  background-color: white;
+  padding: 40px 40px 0px 40px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.section-headline {
+  font-size: 24px;
+  color: #3e4454;
+  font-weight: bold;
+}
+
+.section-description {
+  color: #797d85;
+  line-height: 20px;
+  padding: 20px 0;
+}
+
+.section-inside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-profile {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-image {
+  width: 45px;
+  border-radius: 50px;
+}
+
+.profile-typhography strong {
+  font-weight: bold;
+  color: #4e5358;
+}
+
+.profile-typhography span {
+  color: #b6bac0;
+  display: block;
+  padding-top: 4px;
+}
+
+.section-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #eff2f9;
+}
