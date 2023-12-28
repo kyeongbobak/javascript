@@ -22,7 +22,7 @@
 
     function onClickButton() {
       // 현재 span의 텍스트 가져와 정수형으로 변환 그렇지 않으면 숫자 연산을 할 수 없음
-      let currentValue = span.textContent
+      let currentValue = parseInt(span.textContent)
       span.innerText = currentValue + 1
     }
 
