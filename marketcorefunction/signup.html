@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  본명 : <input type="text" id="username"><br>
+  이메일 : <input type="text" id="email"><br>
+  비밀번호 : <input type="text" id="password"><br>
+  닉네임 : <input type="text" id="accountname"><br>
+  소개 : <input type="text" id="intro"><br>
+  <button type="button" id="submitBtn">전송</button>
+  <span id="resolve"></span>
+  <script>
+
+    const submitAction = (e) => {
+      const userName = document.querySelector("#username").value,
+        userEmail = document.querySelector("#email").value,
+        userPassWord = document.querySelector("#password").value,
+        userAccountName = document.querySelector("#accountname").value,
+        userIntro = document.querySelector("#intro").value,
+        message = document.querySelector("#resolve")
+
+      const data = {
+        "user": {
+          "username": userName,
+          "email": userEmail,
+          "password": userPassWord,
+          "accountname": userAccountName,
+          "intro": userIntro,
+          "image": ""
+        }
+      }
+
+      fetch("https://api.mandarin.weniv.co.kr/user", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }).then(res => res.json()).then(json => message.textContent = json.message)
+    }
+
+
+
+    document.querySelector('#submitBtn').addEventListener('click', submitAction)
+  </script>
+</body>
+
+</html>
